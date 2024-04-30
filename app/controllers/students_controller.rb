@@ -19,7 +19,7 @@ class StudentsController < ApplicationController
     @student.email = params.fetch("query_email")
 
     if @student.valid?
-      @student.save
+       @student.save
       redirect_to("/students", { :notice => "Student created successfully." })
     else
       redirect_to("/students", { :notice => "Student failed to create successfully." })
@@ -35,7 +35,7 @@ class StudentsController < ApplicationController
     @student.email = params.fetch("query_email")
 
     if @student.valid?
-      @student.save
+       @student.save
       redirect_to("/students/#{@student.id}", { :notice => "Student updated successfully."} )
     else
       redirect_to("/students/#{@student.id}", { :alert => "Student failed to update successfully." })

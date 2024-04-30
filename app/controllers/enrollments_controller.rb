@@ -5,7 +5,7 @@ class EnrollmentsController < ApplicationController
     @enrollment.student_id = params.fetch("query_student_id")
 
     if @enrollment.valid?
-      @enrollment.save
+       @enrollment.save
       redirect_to("/students/#{@enrollment.student_id}", { :notice => "Enrollment created successfully." })
     else
       redirect_to("/students/#{@enrollment.student_id}", { :notice => "Enrollment failed to create successfully." })
