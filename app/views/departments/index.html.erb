@@ -6,10 +6,16 @@
 
 <form action="/insert_department" method="post">
   <div>
-    <label for="name_box">Name</label>
-    <input id="name_box" type="text" name="the_name">
+    <label for="name_box">
+      Name
+    </label>
+    
+    <input id="name_box" type="text" name="query_name">
   </div>
-  <button>Create department</button>
+
+  <button>
+    Create department
+  </button>
 </form>
 
 <hr>
@@ -28,7 +34,7 @@
     </th>
   </tr>
 
-  <% @department.each do |department| %>
+  <% @departments.each do |department| %>
     <tr>
       <td>
         <%= department.id %>

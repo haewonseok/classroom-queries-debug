@@ -19,7 +19,7 @@ class CoursesController < ApplicationController
     @course.department_id = params.fetch("query_department_id")
 
     if @course.valid?
-      @course.save
+       @course.save
       redirect_to("/courses", { :notice => "Course created successfully." })
     else
       redirect_to("/courses", { :notice => "Course failed to create successfully." })
